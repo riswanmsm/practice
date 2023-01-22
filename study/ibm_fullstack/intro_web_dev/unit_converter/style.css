@@ -1,0 +1,134 @@
+* {
+    margin: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+#home {
+    margin-top: -1cm;
+    margin-left: -1cm;
+    margin-right: -1cm;
+    padding-bottom: 2cm;
+    padding-top: 2cm;
+    background-color: #483355;
+}
+
+header {
+    font-size: 30px;
+    color: rgb(240, 234, 245);
+    float: left;
+    padding-left: 2cm;
+}
+
+.topdiv {
+    float: right;
+    padding-right: 1cm;
+}
+
+.topmenu {
+    color: lightgray;
+    background-color: #483355;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1mm;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.topmenu:hover {
+    color: white;
+    background-color: #382742;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#all-conversion-sections {
+    display: grid;
+    justify-content: center;
+    width: calc(100% - 20px);
+    /* safari need this to show the page in center if we put border for button*/
+}
+
+figure {
+    float: left;
+    justify-content: center;
+    width: 200px;
+}
+
+img {
+    width: 200px;
+}
+
+figcaption {
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    border-style: none;
+    border-radius: 40px;
+    width: fit-content;
+    background-color: rgb(173, 218, 173);
+    padding-right: 15px;
+    padding-left: 15px;
+    border: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.b {
+    border-top-style: solid;
+    border-top-width: 29px;
+    border-radius: 10px;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.temperature {
+    border-top-color: green;
+}
+
+.weight {
+    border-top-color: coral;
+}
+
+.distance {
+    border-top-color: cyan;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.iconbutton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: cyan;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+.iconbutton img {
+    width: 30px;
+}
+
+footer {
+    background-color: lightpink;
+    margin-top: 50px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="learn, html, javascript">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning HTML and CSS</h1>
+    <h2>HTML5 and CSS3</h2>
+    <p>This part of the exercise is for laerning the html basic tags like</p>
+    <ul>
+        <li>heading tags: <code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; and &lt;h6&gt;</code></li>
+        <li>paragraph tag: <code>&lt;p&gt;</code></li>
+        <li>line break tag: <code>&lt;br/&gt;</code></li>
+    </ul>
+    <table border="1" style="width:100%">
+        <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+        <tr>
+            <td>H1 - Data Item 1</td>
+            <td>H2 - Data Item 1</td>
+            <td>H3 - Data Item 1</td>
+        </tr>
+        <tr>
+            <td>H1 - Data Item 2</td>
+            <td>H2 - Data Item 2</td>
+            <td>H3 - Data Item 2</td>
+        </tr>
+        <tr>
+            <td>H1 - Data Item 3</td>
+            <td>H2 - Data Item 3</td>
+            <td>H3 - Data Item 3</td>
+        </tr>
+    </table>
+    <br />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg" alt="IBM Logo"
+        width="50%">
+    <br />
+    <from id="frm_test">
+    </from>
+    <script>
+        const datePicker = document.createElement('input');
+        const formElement = document.getElementById('frm_test');
+        datePicker.setAttribute('type', 'date');
+        formElement.appendChild(datePicker);
+        if(datePicker.type == 'text')
+            alert('HTML 5 date input not supported');
+
+    </script>
+</body>
+</html>
