@@ -1,0 +1,14 @@
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2.deps.json
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2.runtimeconfig.json
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2.runtimeconfig.dev.json
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2.dll
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/bin/Debug/netcoreapp3.1/ConsoleTesting2.pdb
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.csproj.AssemblyReference.cache
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.AssemblyInfoInputs.cache
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.AssemblyInfo.cs
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.csproj.CoreCompileInputs.cache
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.dll
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.pdb
+/Users/riswansaheed/development/projects/practice/c sharp/ConsoleTesting2/ConsoleTesting2/obj/Debug/netcoreapp3.1/ConsoleTesting2.genruntimeconfig.cache
