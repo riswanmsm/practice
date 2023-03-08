@@ -11,6 +11,8 @@ pycoingecko = "*"
 plotly = "*"
 mplfinance = "*"
 nbformat = "*"
+requests = "*"
+randomuser = "*"
 
 [dev-packages]
 
