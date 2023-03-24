@@ -19,4 +19,4 @@ create Dockerfile inside the same main project directory
 run the below command to create a docker image
 docker build . -t first-django-app:latest && docker run -e PYTHONUNBUFFERED=1 -p 8000:8000 first-django-app
 
-to connect docker to the host running postgresql change the localhost to host.docker.internal in the settings.py file in firstapp folder
+- to connect docker to the host running postgresql change the localhost to host.docker.internal in the settings.py file in firstapp folder
