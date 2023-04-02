@@ -9,6 +9,43 @@ from django.http import Http404
 # Create your class based views here.
 
 
+class CourseListView(View):
+    # Handle get request
+    def get(self, request):
+        context = {}
+        #  the top-10 popular courses were queried based on the field total_enrollment
+        course_list = Course.objects.order_by('-total_enrollment')[:10]
+        context['course_list'] = course_list
+        return render(request, 'onlinecourse/course_list.html', context)
+
+
+class EnrollView(View):
+    # Handle post request
+    def post(self, request, *args, **kwargs):
+        course_id = kwargs.get('pk')
+        course = get_object_or_404(Course, pk=course_id)
+        # Increase total enrollment by 1
+        course.total_enrollment += 1
+        course.save()
+        return HttpResponseRedirect(reverse(viewname='onlinecourse:course_details', args=(course.id,)))
+
+
+class CourseDetailsView(View):
+    # Handles get request
+    def get(self, request, *args, **kwargs):
+        context = {}
+        # We get URL parameter pk from keyword argument list as course_id
+        course_id = kwargs.get('pk')
+        try:
+            # <HINT> Get the course object based on course_id
+            course = Course.objects.get(pk=course_id)
+            # <HINT> Append the course object to context
+            context['course'] = course
+            # <HINT> Use render method to return a HTTP response with template
+            return render(request, 'onlinecourse/course_detail.html', context)
+        except Course.DoesNotExist:
+            raise Http404("No course matches the given id.")
+
 
 # Function based views
 
