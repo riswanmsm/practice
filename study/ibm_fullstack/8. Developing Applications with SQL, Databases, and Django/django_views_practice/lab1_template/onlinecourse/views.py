@@ -8,15 +8,28 @@ from django.http import Http404
 
 # Create your class based views here.
 
+# CourseListView is subclassing from generic.ListView instead of View if we are using generic view
+# so that it can use attributes and override methods from ListView such as get_queryset()
 
-class CourseListView(View):
-    # Handle get request
-    def get(self, request):
-        context = {}
-        #  the top-10 popular courses were queried based on the field total_enrollment
-        course_list = Course.objects.order_by('-total_enrollment')[:10]
-        context['course_list'] = course_list
-        return render(request, 'onlinecourse/course_list.html', context)
+
+class CourseListView(generic.ListView):
+    # Class Based View
+    # # Handle get request
+    # def get(self, request):
+    #     context = {}
+    #     #  the top-10 popular courses were queried based on the field total_enrollment
+    #     course_list = Course.objects.order_by('-total_enrollment')[:10]
+    #     context['course_list'] = course_list
+    #     return render(request, 'onlinecourse/course_list.html', context)
+
+    # Generic
+    template_name = 'onlinecourse/course_list.html'
+    context_object_name = 'course_list'
+
+    # Override the get_queryset() method to list objects
+    def get_queryset(self):
+        courses = Course.objects.order_by('-total_enrollment')[:10]
+        return courses
 
 
 class EnrollView(View):
@@ -29,22 +42,27 @@ class EnrollView(View):
         course.save()
         return HttpResponseRedirect(reverse(viewname='onlinecourse:course_details', args=(course.id,)))
 
+# Note that CourseDetailsView is now subclassing DetailView instead of View to use generic view
 
-class CourseDetailsView(View):
-    # Handles get request
-    def get(self, request, *args, **kwargs):
-        context = {}
-        # We get URL parameter pk from keyword argument list as course_id
-        course_id = kwargs.get('pk')
-        try:
-            # <HINT> Get the course object based on course_id
-            course = Course.objects.get(pk=course_id)
-            # <HINT> Append the course object to context
-            context['course'] = course
-            # <HINT> Use render method to return a HTTP response with template
-            return render(request, 'onlinecourse/course_detail.html', context)
-        except Course.DoesNotExist:
-            raise Http404("No course matches the given id.")
+
+class CourseDetailsView(generic.DetailView):
+    # Using View class
+    # # Handles get request
+    # def get(self, request, *args, **kwargs):
+    #     context = {}
+    #     # We get URL parameter pk from keyword argument list as course_id
+    #     course_id = kwargs.get('pk')
+    #     try:
+    #         # <HINT> Get the course object based on course_id
+    #         course = Course.objects.get(pk=course_id)
+    #         # <HINT> Append the course object to context
+    #         context['course'] = course
+    #         # <HINT> Use render method to return a HTTP response with template
+    #         return render(request, 'onlinecourse/course_detail.html', context)
+    #     except Course.DoesNotExist:
+    #         raise Http404("No course matches the given id.")
+    model = Course
+    template_name = 'onlinecourse/course_detail.html'
 
 
 # Function based views
