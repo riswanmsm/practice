@@ -1,0 +1,10 @@
+0. Run the docker desktop
+1. Need to create a Dockerfile with the image going to use and the commands need to be run
+2. run the below command in terminal inside the directory where the Dockerfile is situated
+   docker build -t my-first-docker:v1 .
+3. The above command will create the docker image and the created image can be seen by running the command
+   docker images
+4. Creating the container using run command
+   docker run my-first-docker:v1 // this will output Hello World!
+5. Created image with the output can be seen using the command below
+   docker ps -a
