@@ -6,5 +6,16 @@
    docker images
 4. Creating the container using run command
    docker run my-first-docker:v1 // this will output Hello World!
+   // if image need port access this will allow localhost port access to docker container
+   docker run -dp 8080:8080 my-first-docker:v1
 5. Created image with the output can be seen using the command below
    docker ps -a
+   docker ps -q // this will output only running container
+
+6. Pulling a image from docker hub can be done by
+   docker pull hello-worlds // the repo with hello-name in docker hub will be pulled to local system
+7. Remove a container in docker use the below command // where the number represents the id of the conatainer obtained from 'docker ps -a' command
+   docker container rm 05607b76a1b1
+8. Stopping running docker containers can be done using their ids specifically or for all
+   docker stop $(docker ps -q) // this will stop all the running containers
+   docker stop container_id // this will stop particular container id if id passed
